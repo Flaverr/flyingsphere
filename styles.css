@@ -1,0 +1,24 @@
+/* Style snippets + existing styles */
+.score-popup {
+    position: absolute;
+    color: gold;
+    font-weight: 900;
+    font-size: 1.2em;
+    animation: float-up 1s ease-out forwards;
+    pointer-events: none;
+}
+@keyframes float-up {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-40px); opacity: 0; }
+}
+.countdown-text {
+    position: absolute;
+    right: 5px;
+    top: -20px;
+    font-size: 0.8em;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 1px 6px;
+    border-radius: 3px;
+}
+/* ...rest of your original CSS should go here... */
