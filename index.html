@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<!-- Your updated HTML goes here, assuming script and style links are intact -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SUPR Growth</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Seed Surge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic reset and full viewport */
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Prevent scrollbars */
+            background-color: #111; /* Dark background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Raleway', sans-serif; /* Apply Raleway */
+        }
+        /* Canvas styling handled in style.css */
+    </style>
 </head>
-<body class="dark-theme">
-    <!-- Game content is assumed same as above -->
-    <script src="script.js"></script>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-layer">
+            <div id="score">Score: 0</div>
+            <div id="start-message" style="display: block;">Tap to Start</div>
+            <div id="game-over-message" style="display: none;">Game Over! Tap to Restart</div>
+        </div>
+    </div>
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://ga.jspm.io/npm:three@0.163.0/build/three.module.js"
+            }
+        }
+    </script>
+
+    <script type="module" src="game.js"></script>
 </body>
 </html>
